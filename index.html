@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Masters - Card Matching Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Game Header -->
+        <div class="game-header">
+            <h1><i class="fas fa-brain"></i> Memory Masters</h1>
+            <div class="control-panel">
+                <button id="restart-btn" class="control-btn">
+                    <i class="fas fa-sync-alt"></i> New Game
+                </button>
+                <button id="exit-btn" class="control-btn">
+                    <i class="fas fa-sign-out-alt"></i> Exit
+                </button>
+            </div>
+        </div>
+
+        <!-- Difficulty Selection -->
+        <div id="difficulty-select" class="difficulty-select">
+            <h2><i class="fas fa-layer-group"></i> Choose Your Challenge</h2>
+            <div class="difficulty-buttons">
+                <button data-difficulty="easy">
+                    <i class="fas fa-seedling"></i>
+                    <span>Beginner</span>
+                    <small>4 × 4</small>
+                </button>
+                <button data-difficulty="medium">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>Advanced</span>
+                    <small>6 × 6</small>
+                </button>
+                <button data-difficulty="hard">
+                    <i class="fas fa-crown"></i>
+                    <span>Master</span>
+                    <small>8 × 8</small>
+                </button>
+            </div>
+        </div>
+
+        <!-- Game Stats -->
+        <div class="game-stats" id="game-stats">
+            <div class="stat-card">
+                <i class="fas fa-star"></i>
+                <div class="stat-info">
+                    <span class="stat-label">Score</span>
+                    <span id="score" class="stat-value">0</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-hand-pointer"></i>
+                <div class="stat-info">
+                    <span class="stat-label">Moves</span>
+                    <span id="moves" class="stat-value">0</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-hourglass-half"></i>
+                <div class="stat-info">
+                    <span class="stat-label">Time</span>
+                    <span id="timer" class="stat-value">0:00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Board -->
+        <div id="game-board" class="game-board"></div>
+
+        <!-- Win Popup -->
+        <div id="win-popup" class="popup">
+            <div class="popup-content">
+                <h2><i class="fas fa-trophy"></i> Victory!</h2>
+                <p>Congratulations, you've mastered the challenge!</p>
+                <div class="stats-grid">
+                    <div class="final-stat">
+                        <i class="fas fa-star"></i>
+                        <span>Final Score:</span>
+                        <span id="final-score" class="highlight">0</span>
+                    </div>
+                    <div class="final-stat">
+                        <i class="fas fa-hourglass-end"></i>
+                        <span>Time Taken:</span>
+                        <span id="final-time" class="highlight">0:00</span>
+                    </div>
+                    <div class="final-stat">
+                        <i class="fas fa-hand-pointer"></i>
+                        <span>Total Moves:</span>
+                        <span id="final-moves" class="highlight">0</span>
+                    </div>
+                </div>
+                <div class="popup-buttons">
+                    <button id="play-again" class="popup-btn">
+                        <i class="fas fa-redo"></i> Play Again
+                    </button>
+                    <button id="share-score" class="popup-btn secondary">
+                        <i class="fas fa-share-alt"></i> Share Score
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exit Confirmation Popup -->
+        <div id="exit-popup" class="popup">
+            <div class="popup-content">
+                <h2><i class="fas fa-exclamation-circle"></i> Exit Game?</h2>
+                <p>Your progress will be lost. Are you sure?</p>
+                <div class="popup-buttons">
+                    <button id="confirm-exit" class="popup-btn danger">
+                        <i class="fas fa-sign-out-alt"></i> Exit
+                    </button>
+                    <button id="cancel-exit" class="popup-btn secondary">
+                        <i class="fas fa-gamepad"></i> Continue
+                    </button>
+                </div>
+            </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
