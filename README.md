@@ -15,6 +15,7 @@ Technologies
 •	HTML5, CSS3, JavaScript: Core game structure and logic.
 •	Font Awesome: Icons for UI elements.
 •	Google Fonts (Poppins): Modern typography.
+
 How to Play
 1.	Choose a difficulty level.
 2.	Flip cards to find matching emoji pairs.
